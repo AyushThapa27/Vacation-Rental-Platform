@@ -1,2 +1,2 @@
 # Vacation-Rental-Platform
-project in mern
+Backend Project using express,ejs-templates and node libraries
