@@ -5,13 +5,17 @@ const reviewSchema = new mongoose.Schema({
     type: String,
   },
   rating: {
-    type: String,
+    type: Number,
     min: 1,
     max: 5,
   },
   createdAt: {
-    type: Number,
-    default: Date.now(),
+    type: Date,
+    default: Date.now,
+  },
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
   },
 });
 
