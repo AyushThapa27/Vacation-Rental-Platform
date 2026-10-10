@@ -1,98 +1,124 @@
-# Wanderlust - Vacation Rental Platform
+# Vacation Rental Platform (Wanderlust)
 
-A full-stack web application for listing and reviewing vacation rentals, similar to Airbnb. Users can create accounts, post listings, leave reviews, and book accommodations.
+A full-stack web application inspired by Airbnb where users can create, manage, and review vacation rental listings.  
+The project is built using Node.js, Express, and MongoDB and follows the MVC architecture pattern.
 
-## Features
+This project is currently **under development**, and new features are being added gradually.
 
-- **User Authentication** - Secure signup/login with Passport.js
-- **Listings Management** - Create, read, update, and delete property listings
-- **Review System** - Users can leave ratings and comments on listings
-- **Session Management** - Persistent user sessions with Express-session
-- **Flash Messaging** - User feedback with success/error notifications
-- **Responsive UI** - Bootstrap-based responsive design
+---
+
+## Features (Current)
+
+- User authentication (signup, login, logout)
+- Create, edit, and delete vacation rental listings
+- Add and delete reviews for listings
+- Authorization (users can only modify their own content)
+- Session-based authentication using cookies
+- Flash messages for user feedback
+- Server-side rendering using EJS templates
+- Responsive UI using Bootstrap 5
+
+---
 
 ## Tech Stack
 
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose ODM
-- **Authentication**: Passport.js with Local Strategy
-- **Frontend**: EJS Templates, Bootstrap 5
-- **Tools**: Nodemon (development), Method-Override
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose
+- **Authentication:** Passport.js (Local Strategy)
+- **Frontend:** EJS, Bootstrap 5
+- **Other Tools:** Express-session, Method-Override, Connect-flash
 
-## Installation
+---
 
-1. Clone the repository
+## Setup Instructions
+
+### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd major_project
+git clone https://github.com/AyushThapa27/Vacation-Rental-Platform.git
+cd Vacation-Rental-Platform
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-3. Start MongoDB
+### 3. Start MongoDB
+
+Make sure MongoDB is running locally:
 
 ```bash
 mongod
 ```
 
-4. Run the application
+### 4. Run the application
 
 ```bash
 npm start
-# Or for development with auto-reload
-npm run dev
 ```
 
-5. Open browser and visit
+### 5. Open in browser
+
+http://localhost:8080/listings
+
+---
+
+## 📁 Project Structure
 
 ```
-http://localhost:8080
-```
-
-## Usage
-
-- **Home** - Browse all listings
-- **Sign Up** - Create a new account
-- **Login** - Authenticate with your credentials
-- **New Listing** - Add a property (requires login)
-- **Edit/Delete** - Manage your own listings
-- **Reviews** - Leave ratings and comments on listings (requires login)
-
-## Project Structure
-
-```
-├── app.js                 # Main server file
+├── app.js                 # Main entry point
 ├── middleware.js          # Custom middleware functions
-├── schema.js              # Joi validation schemas
-├── package.json
-├── routes/
-│   ├── listing.js        # Listings routes
-│   ├── review.js         # Reviews routes
-│   └── user.js           # Authentication routes
-├── models/
-│   ├── listing.js        # Listing schema
-│   ├── review.js         # Review schema
-│   └── user.js           # User schema
-├── views/                # EJS templates
+├── schema.js              # Validation schemas (Joi)
+├── routes/                # Application routes
+│   ├── listing.js
+│   ├── review.js
+│   └── user.js
+├── models/                # Database models
+│   ├── listing.js
+│   ├── review.js
+│   └── user.js
+├── views/                 # EJS templates
 │   ├── layouts/
 │   ├── listings/
 │   ├── users/
 │   └── includes/
-├── public/               # Static files (CSS, JS)
-└── utils/                # Utility functions
+├── public/                # Static assets (CSS, Bootstrap)
+└── utils/                 # Helper functions
 ```
 
-## Future Improvements
+---
 
-- Add booking functionality
-- Implement image uploads
-- Add payment integration
-- Email verification
-- Admin dashboard
-- Advanced search filters
-- User ratings and profiles
+## 🧠 What I Learned
+
+- Building RESTful APIs using Express.js
+- Authentication using Passport.js
+- Session management with cookies
+- Authorization and access control
+- MongoDB schema design and relationships
+- MVC architecture in a real-world project structure
+
+---
+
+## 🚧 Project Status
+
+This project is currently **under development**.  
+More features and improvements are actively being worked on.
+
+---
+
+## 🔮 Planned Improvements
+
+- Image upload functionality for listings
+- Booking system for vacation rentals
+- Map integration for location-based listings
+- Payment gateway integration
+- Advanced search and filtering options
+- User profile pages with activity tracking
+
+---
+
+## ⭐ Note
+
+This project is built for learning and improving full-stack development skills, focusing on backend logic, authentication systems, and scalable architecture design.
