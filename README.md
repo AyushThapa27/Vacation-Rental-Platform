@@ -90,7 +90,7 @@ http://localhost:8080/listings
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - Building RESTful APIs using Express.js
 - Authentication using Passport.js
@@ -101,14 +101,14 @@ http://localhost:8080/listings
 
 ---
 
-## 🚧 Project Status
+## Project Status
 
 This project is currently **under development**.  
 More features and improvements are actively being worked on.
 
 ---
 
-## 🔮 Planned Improvements
+## Planned Improvements
 
 - Image upload functionality for listings
 - Booking system for vacation rentals
@@ -119,6 +119,6 @@ More features and improvements are actively being worked on.
 
 ---
 
-## ⭐ Note
+## Note
 
 This project is built for learning and improving full-stack development skills, focusing on backend logic, authentication systems, and scalable architecture design.
