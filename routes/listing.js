@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const { isLoggedIn, isOwner, validateListing } = require("../middleware.js");
+const { storage, cloudinary } = require("../cloudconfig.js");
+
+const multer = require("multer");
+const upload = multer({ storage });
 
 const Listing = require("../models/listing.js");
 const {
@@ -23,8 +27,14 @@ router.get("/new", isLoggedIn, renderNewForm);
 //show route
 router.get("/:id", wrapAsync(showListing));
 
-//create route
-router.post("/", isLoggedIn, validateListing, wrapAsync(createListing));
+// //create route
+router.post(
+  "/",
+  isLoggedIn,
+  upload.single("listing[image]"),
+  validateListing,
+  wrapAsync(createListing),
+);
 
 //edit route
 router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(renderEditForm));
@@ -34,6 +44,7 @@ router.put(
   "/:id",
   isLoggedIn,
   isOwner,
+  upload.single("listing[image]"),
   validateListing,
   wrapAsync(updateListing),
 );
